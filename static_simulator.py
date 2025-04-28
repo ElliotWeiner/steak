@@ -308,7 +308,7 @@ def plot_logs(t_log, X_log, targets=None):
 if __name__ == "__main__":
 
     # set values HERE
-    targets = SteakTargets(Tsteak_init=66.0, tpan_init=350, Tgoal=145.0, Cgoal=90.0)
+    targets = SteakTargets(Tsteak_init=66.0, tpan_init=350, Tgoal=135.0, Cgoal=95.0)
     opts = SimOptions()
 
 

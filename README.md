@@ -1,4 +1,3 @@
-# steak
 Let me cook 😎 🥩
 
 
@@ -27,8 +26,6 @@ Cooking the perfect steak is a blend of art and science. This project models ste
 
 Cooking steak to perfection is elusive for many. By applying nonlinear control techniques, we can model and control the steak's internal temperature and surface sear to achieve consistent results.
 
-![Background - Cooking Steak](media/figure1_background.png)
-
 ## Previous Work
 
 - Development and validation of computational models for steak cooking.
@@ -47,14 +44,14 @@ Cooking steak to perfection is elusive for many. By applying nonlinear control t
 
 - Temperature evolution is slow initially, speeds up, then slows again — modeled approximately as a sigmoid curve.
 
-![Internal Temperature Model](media/figure4_internal_temp_model.png)
+![Internal Temperature Model](media/sear_fit.png)
 
 ## Searing Index Modeling
 
 - Searing happens rapidly at first, then plateaus.
 - Modeled using an exponential function based on visual inspection.
 
-![Searing Index Model](media/figure5_searing_index_model.png)
+![Searing Index Model](media/Tint_fit.png)
 
 ## System Representation
 
@@ -62,7 +59,7 @@ Cooking steak to perfection is elusive for many. By applying nonlinear control t
 - `X2` and `Ẋ2`: Variables for internal temperature control.
 - `X3` and `Ẋ3`: Introduced pan temperature (`Tpan`) as a controllable state variable.
 
-![System Representation](media/figure6_system_representation.png)
+![System Representation](media/system_rep.png)
 
 ## Finding Constants
 
@@ -72,8 +69,7 @@ Cooking steak to perfection is elusive for many. By applying nonlinear control t
 - Infrared thermometer for pan temperature (verified every 30 seconds).
 - Visual inspection for sear quality.
 
-![Experiment Setup](media/figure2_experiment_setup.png)
-![Experiment Setup Continued](media/figure3_experiment_setup_2.png)
+![Experiment Setup](media/experiment_setup.png)
 
 **Internal Temperature Model Constants:**
 ```
@@ -100,30 +96,24 @@ Cmax = 100
   - Reverse Sear
   - Static Temperature Cooking
 
-![Cooking Methods Diagram](media/figure7_cooking_methods.png)
 
 ## Results
 
-**Initial Static Temperature Setup:**
-- Let pan reach a target temperature before cooking begins.
-
-![Static Temperature Result](media/figure9_static_temp.png)
-
 **Basic Simulation Results:**
+- Let pan reach a target temperature before cooking begins.
 - Internal and surface temps achieved goals within 1 second of each other.
 
-![Basic Simulation](media/figure10_basic_simulation.png)
+![Basic Simulation](media/images/result0.png)
 
 **Added Heat Loss Scenario:**
 - PID controller introduced robustness to convective losses and larger meat pieces.
 
-![Heat Loss Simulation](media/figure11_heat_loss_simulation.png)
+![Heat Loss Simulation](media/images/result1.png)
 
 **Altered Initial Temperature:**
 - Dynamic gain scheduling proposed to counter varying starting conditions.
 
-![Altered Initial Temperature](media/figure12_altered_initial_temp.png)
-![Altered Initial Temperature Continued](media/figure13_altered_initial_temp_2.png)
+![Altered Initial Temperature](media/images/result2.png)
 
 ## Conclusions & Future Work
 

@@ -44,14 +44,18 @@ Cooking steak to perfection is elusive for many. By applying nonlinear control t
 
 - Temperature evolution is slow initially, speeds up, then slows again — modeled approximately as a sigmoid curve.
 
-![Internal Temperature Model](media/images/sear_fit.png)
+<p align="center">
+  <img src="media/images/small/sear_fit_small.png" alt="Internal Temperature Model">
+</p>
 
 ## Searing Index Modeling
 
 - Searing happens rapidly at first, then plateaus.
 - Modeled using an exponential function based on visual inspection.
 
-![Searing Index Model](media/images/Tint_fit.png)
+<p align="center">
+  <img src="media/images/small/Tint_fit_small.png" alt="Searing Index Model">
+</p>
 
 ## System Representation
 
@@ -59,7 +63,9 @@ Cooking steak to perfection is elusive for many. By applying nonlinear control t
 - `X2` and `Ẋ2`: Variables for internal temperature control.
 - `X3` and `Ẋ3`: Introduced pan temperature (`Tpan`) as a controllable state variable.
 
-![System Representation](media/images/system_rep.png)
+<p align="center">
+  <img src="media/images/small/system_rep_small.png" alt="System Representation">
+</p>
 
 ## Finding Constants
 
@@ -69,7 +75,10 @@ Cooking steak to perfection is elusive for many. By applying nonlinear control t
 - Infrared thermometer for pan temperature (verified every 30 seconds).
 - Visual inspection for sear quality.
 
-![Experiment Setup](media/images/experiment_setup.png)
+<p align="center">
+  <img src="media/images/small/experiment_setup_small.png" alt="Experiment Setup">
+</p>
+
 
 **Internal Temperature Model Constants:**
 ```
@@ -103,17 +112,23 @@ Cmax = 100
 - Let pan reach a target temperature before cooking begins.
 - Internal and surface temps achieved goals within 1 second of each other.
 
-![Basic Simulation](media/images/result0.png)
+<p align="center">
+  <img src="media/images/result0.png" alt="Basic Simulation">
+</p>
 
 **Added Heat Loss Scenario:**
 - PID controller introduced robustness to convective losses and larger meat pieces.
 
-![Heat Loss Simulation](media/images/result1.png)
+<p align="center">
+  <img src="media/images/result1.png" alt="Heat Loss Simulation">
+</p>
 
 **Altered Initial Temperature:**
 - Dynamic gain scheduling proposed to counter varying starting conditions.
 
-![Altered Initial Temperature](media/images/result2.png)
+<p align="center">
+  <img src="media/images/result2.png" alt="Altered Initial Temperature">
+</p>
 
 ## Conclusions & Future Work
 

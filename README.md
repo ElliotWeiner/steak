@@ -44,14 +44,14 @@ Cooking steak to perfection is elusive for many. By applying nonlinear control t
 
 - Temperature evolution is slow initially, speeds up, then slows again — modeled approximately as a sigmoid curve.
 
-![Internal Temperature Model](media/sear_fit.png)
+![Internal Temperature Model](media/images/sear_fit.png)
 
 ## Searing Index Modeling
 
 - Searing happens rapidly at first, then plateaus.
 - Modeled using an exponential function based on visual inspection.
 
-![Searing Index Model](media/Tint_fit.png)
+![Searing Index Model](media/images/Tint_fit.png)
 
 ## System Representation
 
@@ -59,7 +59,7 @@ Cooking steak to perfection is elusive for many. By applying nonlinear control t
 - `X2` and `Ẋ2`: Variables for internal temperature control.
 - `X3` and `Ẋ3`: Introduced pan temperature (`Tpan`) as a controllable state variable.
 
-![System Representation](media/system_rep.png)
+![System Representation](media/images/system_rep.png)
 
 ## Finding Constants
 
@@ -69,7 +69,7 @@ Cooking steak to perfection is elusive for many. By applying nonlinear control t
 - Infrared thermometer for pan temperature (verified every 30 seconds).
 - Visual inspection for sear quality.
 
-![Experiment Setup](media/experiment_setup.png)
+![Experiment Setup](media/images/experiment_setup.png)
 
 **Internal Temperature Model Constants:**
 ```
